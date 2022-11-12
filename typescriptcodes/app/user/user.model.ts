@@ -1,5 +1,5 @@
 import { Product } from "../product/product.model";
-import { basemodel } from "../basemodel";
+import { basemodel } from "../categoryidkw/basemodel";
 
 export enum ROLES{
     ADMIN = "admin",
@@ -9,8 +9,7 @@ export enum ROLES{
 export interface user extends basemodel {
     username : string;
     role : ROLES
-    UserPurchases?: [
-        Product /* | undefined */
-    ]  
+    UserPurchases?: Product[]
+    
 }
 
